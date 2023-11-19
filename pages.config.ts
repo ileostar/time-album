@@ -33,4 +33,11 @@ export default defineUniPages({
     ],
   },
   debug: true,
+  easycom: {
+    autoscan: true,
+    custom: {
+      '^nut-(.*)?-(.*)': 'nutui-uniapp/components/$1$2/$1$2.vue',
+      '^nut-(.*)': 'nutui-uniapp/components/$1/$1.vue',
+    },
+  },
 })

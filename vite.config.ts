@@ -6,9 +6,17 @@ import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
+import { NutResolver } from 'nutui-uniapp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "nutui-uniapp/styles/variables.scss";',
+      },
+    },
+  },
   plugins: [
     // https://github.com/uni-helper/vite-plugin-uni-manifest
     UniHelperManifest(),
@@ -20,6 +28,7 @@ export default defineConfig({
     UniHelperLayouts(),
     // https://github.com/uni-helper/vite-plugin-uni-components
     UniHelperComponents({
+      resolvers: [NutResolver()],
       dts: 'src/components.d.ts',
       directoryAsNamespace: true,
     }),

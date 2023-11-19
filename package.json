@@ -42,7 +42,9 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "npx simple-git-hooks",
+    "commit": "git add .&& git cz",
+    "push": "git push"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3090720231104001",
@@ -61,6 +63,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3090720231104001",
     "@uni-helper/uni-use": "^0.17.1",
     "@vueuse/core": "^9.13.0",
+    "nutui-uniapp": "^1.5.1",
     "vue": "^3.3.8",
     "vue-i18n": "^9.6.5"
   },
@@ -85,8 +88,11 @@
     "@unocss/eslint-config": "^0.57.2",
     "@vue/runtime-core": "^3.3.8",
     "@vue/tsconfig": "^0.4.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog-zh": "^0.0.2",
     "eslint": "^8.53.0",
     "lint-staged": "^15.0.2",
+    "sass": "^1.69.5",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2",
     "unocss": "^0.57.2",
@@ -99,5 +105,10 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh"
+    }
   }
 }
