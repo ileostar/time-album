@@ -11,27 +11,26 @@ export default defineUniPages({
     navigationBarTextStyle: '@navTxtStyle',
     navigationBarTitleText: '流年集锦',
     navigationStyle: 'default',
-    disableScroll: true
   },
   tabBar: {
-    backgroundColor: "@tabBgColor",
-    borderStyle: "@tabBorderStyle",
-    color: "@tabFontColor",
-    selectedColor: "@tabSelectedColor",
+    backgroundColor: '@tabBgColor',
+    borderStyle: '@tabBorderStyle',
+    color: '@tabFontColor',
+    selectedColor: '@tabSelectedColor',
     list: [
       {
-        "pagePath": "pages/album",
-        "text": "相册",
+        pagePath: 'pages/album',
+        text: '相册',
       },
       {
-        "pagePath": "pages/find",
-        "text": "发现",
+        pagePath: 'pages/find',
+        text: '发现',
       },
       {
-        "pagePath": "pages/me",
-        "text": "我的",
-      }
-    ]
+        pagePath: 'pages/me',
+        text: '我的',
+      },
+    ],
   },
-  debug: true
+  debug: true,
 })

@@ -21,8 +21,7 @@
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTextStyle": "@navTxtStyle",
     "navigationBarTitleText": "流年集锦",
-    "navigationStyle": "default",
-    "disableScroll": true
+    "navigationStyle": "default"
   },
   "tabBar": {
     "backgroundColor": "@tabBgColor",
