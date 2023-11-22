@@ -13,5 +13,13 @@ declare module '@vue/runtime-core' {
     HiCounter: typeof import('./components/HiCounter.vue')['default']
     InputEntry: typeof import('./components/InputEntry.vue')['default']
     NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
+    NutBacktop: typeof import('nutui-uniapp/components/backtop/backtop.vue')['default']
+    NutButton: typeof import('nutui-uniapp/components/button/button.vue')['default']
+    NutCell: typeof import('nutui-uniapp/components/cell/cell.vue')['default']
+    NutCellGroup: typeof import('nutui-uniapp/components/cellgroup/cellgroup.vue')['default']
+    NutIcon: typeof import('nutui-uniapp/components/icon/icon.vue')['default']
+    NutList: typeof import('nutui-uniapp/components/list/list.vue')['default']
+    NutSearchbar: typeof import('nutui-uniapp/components/searchbar/searchbar.vue')['default']
+    NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
   }
 }

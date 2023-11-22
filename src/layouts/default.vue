@@ -1,5 +1,6 @@
 <template>
-  <view h-full px-5 py-5 text-center flex="~ justify-between col item-center">
+  <view flex="~ col" box-border h-full w-full justify-between px-5 text-center>
     <slot />
+    <Footer />
   </view>
 </template>

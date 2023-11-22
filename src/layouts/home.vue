@@ -1,10 +1,6 @@
 <template>
-  <view flex="~ col" h-full justify-between px-10 py-20 text-center>
+  <view flex="~ col" box-border h-full w-full justify-between px-5 text-center>
     <slot />
-    <app-footer />
-    <view mx-auto mt-5 text-center text-sm opacity-25>
-      [Home Layout]
-    </view>
     <Footer />
   </view>
 </template>

@@ -7,18 +7,19 @@ export default defineUniPages({
     backgroundColorBottom: '@bgColorBottom',
     backgroundColorTop: '@bgColorTop',
     backgroundTextStyle: '@bgTxtStyle',
-    navigationBarBackgroundColor: '#000000',
+    navigationBarBackgroundColor: '@navBgColor',
     navigationBarTextStyle: '@navTxtStyle',
     navigationBarTitleText: '流年集锦',
   },
   tabBar: {
-    backgroundColor: '@tabBgColor',
-    borderStyle: '@tabBorderStyle',
-    color: '@tabFontColor',
-    selectedColor: '@tabSelectedColor',
+    custom: true,
     list: [
       {
         pagePath: 'pages/index',
+        text: '照片',
+      },
+      {
+        pagePath: 'pages/album',
         text: '相册',
       },
       {
