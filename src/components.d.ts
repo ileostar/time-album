@@ -9,8 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Footer: typeof import('./components/Footer.vue')['default']
     HiCounter: typeof import('./components/HiCounter.vue')['default']
     InputEntry: typeof import('./components/InputEntry.vue')['default']
-    NutButton: typeof import('nutui-uniapp/components/button/button.vue')['default']
+    NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
   }
 }

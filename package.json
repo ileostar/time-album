@@ -43,7 +43,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "postinstall": "npx simple-git-hooks",
-    "commit": "git add .&& git cz",
+    "commit": "git add . && git cz",
     "push": "git push"
   },
   "dependencies": {

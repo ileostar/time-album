@@ -5,4 +5,8 @@
   <InputEntry />
 </template>
 
-<style></style>
+<route type="home" lang="json">
+  {
+    "layout": "home"
+  }
+  </route>
