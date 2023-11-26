@@ -7,6 +7,7 @@ import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import { NutResolver } from 'nutui-uniapp'
+import PiniaAutoRefs from 'pinia-auto-refs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -35,11 +36,14 @@ export default defineConfig({
     Uni(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: ['vue', '@vueuse/core', 'uni-app'],
+      imports: ['vue', '@vueuse/core', 'uni-app', 'pinia', {
+        '@/helper/pinia-auto-refs': ['useStore'],
+      }],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables', 'src/stores', 'src/utils'],
       vueTemplate: true,
     }),
+    PiniaAutoRefs(),
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     UnoCSS(),

@@ -65,6 +65,8 @@
     "@vueuse/core": "^9.13.0",
     "alova": "^2.14.0",
     "nutui-uniapp": "^1.5.1",
+    "pinia": "^2.1.7",
+    "pinia-auto-refs": "^0.0.10",
     "vue": "^3.3.8",
     "vue-i18n": "^9.6.5"
   },
