@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-  <AppLogos />
-  <InputEntry />
+  <MomentCard />
+  <MomentCard />
 </template>
