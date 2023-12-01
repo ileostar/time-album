@@ -1,3 +1,4 @@
+import { useRequest } from 'alova'
 import user from '@/api/methods/user'
 
 export default {
