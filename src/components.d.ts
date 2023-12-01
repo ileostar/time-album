@@ -9,9 +9,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Charts: typeof import('./components/Charts.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    GridBox: typeof import('./components/GridBox.vue')['default']
     HiCounter: typeof import('./components/HiCounter.vue')['default']
+    ImgHandle: typeof import('./components/ImgHandle.vue')['default']
     InputEntry: typeof import('./components/InputEntry.vue')['default']
+    MomentCard: typeof import('./components/MomentCard.vue')['default']
     NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
     NutBacktop: typeof import('nutui-uniapp/components/backtop/backtop.vue')['default']
     NutCell: typeof import('nutui-uniapp/components/cell/cell.vue')['default']

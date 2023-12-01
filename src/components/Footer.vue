@@ -7,7 +7,6 @@ const currIndex = ref(0)
 /**
  * 页面跳转
  * @param url string
- * @returns void
  */
 function tabClick(url: string, index: number) {
   // eslint-disable-next-line no-console
