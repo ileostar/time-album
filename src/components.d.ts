@@ -20,11 +20,10 @@ declare module '@vue/runtime-core' {
     NutBacktop: typeof import('nutui-uniapp/components/backtop/backtop.vue')['default']
     NutCell: typeof import('nutui-uniapp/components/cell/cell.vue')['default']
     NutDialog: typeof import('nutui-uniapp/components/dialog/dialog.vue')['default']
-    NutGrid: typeof import('nutui-uniapp/components/grid/grid.vue')['default']
-    NutGridItem: typeof import('nutui-uniapp/components/griditem/griditem.vue')['default']
     NutIcon: typeof import('nutui-uniapp/components/icon/icon.vue')['default']
     NutList: typeof import('nutui-uniapp/components/list/list.vue')['default']
     NutSearchbar: typeof import('nutui-uniapp/components/searchbar/searchbar.vue')['default']
     NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
+    NutToast: typeof import('nutui-uniapp/components/toast/toast.vue')['default']
   }
 }

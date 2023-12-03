@@ -7,6 +7,8 @@ export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
+  const albumApi: typeof import('./api/albumApi')['default']
+  const api: typeof import('./api/index')['default']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -39,9 +41,11 @@ declare global {
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
+  const http: typeof import('./utils/http')['default']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const inject: typeof import('vue')['inject']
   const injectLocal: typeof import('@vueuse/core')['injectLocal']
+  const instance: typeof import('./api/index')['instance']
   const isDefined: typeof import('@vueuse/core')['isDefined']
   const isProxy: typeof import('vue')['isProxy']
   const isReactive: typeof import('vue')['isReactive']
@@ -97,6 +101,7 @@ declare global {
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
   const pausableWatch: typeof import('@vueuse/core')['pausableWatch']
+  const pictureApi: typeof import('./api/pictureApi')['default']
   const provide: typeof import('vue')['provide']
   const provideLocal: typeof import('@vueuse/core')['provideLocal']
   const reactify: typeof import('@vueuse/core')['reactify']
@@ -137,6 +142,7 @@ declare global {
   const tryOnMounted: typeof import('@vueuse/core')['tryOnMounted']
   const tryOnScopeDispose: typeof import('@vueuse/core')['tryOnScopeDispose']
   const tryOnUnmounted: typeof import('@vueuse/core')['tryOnUnmounted']
+  const uniStorage: typeof import('./utils/uniStorage')['uniStorage']
   const unref: typeof import('vue')['unref']
   const unrefElement: typeof import('@vueuse/core')['unrefElement']
   const until: typeof import('@vueuse/core')['until']
@@ -157,6 +163,7 @@ declare global {
   const useAsyncQueue: typeof import('@vueuse/core')['useAsyncQueue']
   const useAsyncState: typeof import('@vueuse/core')['useAsyncState']
   const useAttrs: typeof import('vue')['useAttrs']
+  const useAuth: typeof import('./composables/useAuth')['useAuth']
   const useBase64: typeof import('@vueuse/core')['useBase64']
   const useBattery: typeof import('@vueuse/core')['useBattery']
   const useBluetooth: typeof import('@vueuse/core')['useBluetooth']
@@ -332,6 +339,7 @@ declare module 'vue' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly api: UnwrapRef<typeof import('./api/index')['default']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -367,6 +375,7 @@ declare module 'vue' {
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectLocal: UnwrapRef<typeof import('@vueuse/core')['injectLocal']>
+    readonly instance: UnwrapRef<typeof import('./api/index')['instance']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
@@ -649,6 +658,7 @@ declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly api: UnwrapRef<typeof import('./api/index')['default']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -684,6 +694,7 @@ declare module '@vue/runtime-core' {
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectLocal: UnwrapRef<typeof import('@vueuse/core')['injectLocal']>
+    readonly instance: UnwrapRef<typeof import('./api/index')['instance']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
