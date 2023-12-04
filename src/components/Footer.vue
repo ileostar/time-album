@@ -24,12 +24,7 @@ function tabClick(url: string, index: number) {
  * @return {string} The generated class string.
  */
 async function classAction(index: number) {
-  const ret = ['menu-item']
-  if (currIndex.value === index)
-    ret.push('color-blue')
-  // eslint-disable-next-line no-console
-  console.log(ret)
-  return ret.join(' ')
+  return currIndex.value === index ? 'active' : ''
 }
 
 /**
@@ -70,3 +65,9 @@ const menu = [
     </view>
   </view>
 </template>
+
+<style>
+.active {
+  color: aqua;
+}
+</style>

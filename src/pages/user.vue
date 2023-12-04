@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import type { ToastInst } from 'nutui-uniapp'
+
 const visible1 = ref(false)
+const toastRef = ref<ToastInst>()
 function onCancel() {
   // eslint-disable-next-line no-console
   console.log('event cancel')
@@ -11,14 +14,66 @@ function onOk() {
 function baseClick(): void {
   visible1.value = true
 }
+
+const { updateUserInfos } = useStore('users')
+
+/**
+ * Executes a click event on a ref.
+ *
+ * @param {string} type - The type of the toast to show.
+ * @param {string} msg - The message to display in the toast.
+ */
+function refClick(type: string, msg: string) {
+  toastRef.value?.showToast[type as 'fail' | 'success' | 'warn' | 'loading'](msg, {
+    title: '使用ref调用更加方便与灵活',
+    duration: 0,
+  })
+
+  setTimeout(() => {
+    toastRef.value?.hideToast()
+  }, 1000)
+}
+
+/**
+ * 小程序登陆
+ *
+ * @returns {Promise<void>} A promise that resolves when the user is logged in successfully.
+ * @throws {Error} If an error occurs during the login process.
+ */
+async function wxLogin(): Promise<void> {
+  try {
+    const p1 = await uni.login()
+    const p2 = await uni.getUserProfile()
+    const openidReq = await userApi.getOpenId(p1.code)
+    if (openidReq.data.code === 200) {
+      const loginReq = await userApi.login(openidReq.data.data.openid, p2.userInfo.nickName, p2.userInfo.avatarUrl)
+      if (loginReq.data.code === 200) {
+        updateUserInfos(loginReq.data.data) // 更新用户数据
+        refClick('success', '登陆成功')
+      }
+      else {
+        refClick('fail', '登陆失败')
+      }
+    }
+    else {
+      refClick('fail', '获取openid错误')
+    }
+  }
+  catch (error) {
+    console.error(error)
+    refClick('fail', '发生错误')
+  }
+}
 </script>
 
 <template>
   <view flex="~ col" box-border h-full w-full>
     <view mt-2 light:bg="gray-200/30" dark:bg="gray" box-border h-30 flex items-center justify-between gap-5 rd-5 px-5 shadow-sm>
-      <nut-avatar z-1 -m-20 size="large">
-        <img src="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png">
-      </nut-avatar>
+      <div @click="wxLogin">
+        <nut-avatar z-1 -m-20 size="large">
+          <img src="https://img12.360buyimg.com/imagetools/jfs/t1/196430/38/8105/14329/60c806a4Ed506298a/e6de9fb7b8490f38.png">
+        </nut-avatar>
+      </div>
       <view flex="~ col" box-border flex-1 items-start>
         <p text-5 font-bold>
           LeoStar
