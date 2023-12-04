@@ -9,12 +9,14 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Albums: typeof import('./components/Albums.vue')['default']
+    AddAlbum: typeof import('./components/AddAlbum.vue')['default']
+    AddMoment: typeof import('./components/AddMoment.vue')['default']
+    AlbumItem: typeof import('./components/AlbumItem.vue')['default']
+    AlbumsBox: typeof import('./components/AlbumsBox.vue')['default']
     Charts: typeof import('./components/Charts.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
-    HiCounter: typeof import('./components/HiCounter.vue')['default']
-    ImgHandle: typeof import('./components/ImgHandle.vue')['default']
-    InputEntry: typeof import('./components/InputEntry.vue')['default']
+    ImageItem: typeof import('./components/ImageItem.vue')['default']
+    ImagesBox: typeof import('./components/ImagesBox.vue')['default']
     MomentCard: typeof import('./components/MomentCard.vue')['default']
     NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
     NutBacktop: typeof import('nutui-uniapp/components/backtop/backtop.vue')['default']

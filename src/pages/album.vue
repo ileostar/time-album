@@ -18,9 +18,10 @@
 </script>
 
 <template>
-  <Albums>
-    <ImgHandle />
-    <ImgHandle />
-    <ImgHandle />
-  </Albums>
+  <AlbumsBox mt-3>
+    <AlbumItem />
+    <AlbumItem />
+    <AlbumItem />
+  </AlbumsBox>
+  <AddAlbum />
 </template>

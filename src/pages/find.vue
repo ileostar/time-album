@@ -3,4 +3,5 @@
 <template>
   <MomentCard />
   <MomentCard />
+  <AddMoment />
 </template>

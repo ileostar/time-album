@@ -18,7 +18,7 @@ defineProps({
 
 <template>
   <div flex="~ col" mt-1 items-center justify-start>
-    <img :src="imgUrl" rd-5 style="height: 190rpx;width:190rpx" alt="">
+    <img :src="imgUrl" rd-5 shadow-md style="height: 190rpx;width:190rpx" alt="">
     <div flex="~" mt-1 items-center gap-3>
       <text text-3>
         {{ desc }}

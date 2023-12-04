@@ -37,4 +37,12 @@
 .container img {
   flex: 1 0 auto;
 }
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
 </style>

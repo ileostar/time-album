@@ -19,19 +19,11 @@ export default {
       </template>
     </nut-searchbar>
   </nut-sticky>
-  <nut-backtop>
-    <template #content>
-      <nut-cell>
-        <nut-list :height="50" :list-data="count">
-          <template #default="{ index }">
-            <div class="list-item">
-              {{ index }}
-            </div>
-          </template>
-        </nut-list>
-      </nut-cell>
-    </template>
-  </nut-backtop>
+  <ImagesBox>
+    <ImageItem />
+    <ImageItem />
+    <ImageItem />
+  </ImagesBox>
 </template>
 
 <style lang="scss">

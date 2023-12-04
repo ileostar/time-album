@@ -57,7 +57,7 @@ const menu = [
 </script>
 
 <template>
-  <view class="fixed bottom-0 tab" b="solid 0 t-1 gray/20" z-999 box-border h-15 w-full flex items-center justify-between px-8 -mx-5 dark:bg-black light:bg-white>
+  <view class="fixed bottom-0" b="solid 0 t-1 gray/20" z-999 box-border h-15 w-full flex items-center justify-between px-8 -mx-5 dark:bg-black light:bg-white>
     <view v-for="item, index in menu" :key="item.name" flex>
       <view :class="classAction(index)" @click="tabClick(item.path, index)">
         <i text-6 :class="item.icon" />
