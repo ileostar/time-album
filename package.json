@@ -40,8 +40,8 @@
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ignore-pattern **/helper/pinia-auto-refs.ts",
+    "lint:fix": "eslint . --fix --ignore-pattern **/helper/pinia-auto-refs.ts",
     "postinstall": "npx simple-git-hooks",
     "commit": "git add . && git cz",
     "push": "git push"
@@ -108,7 +108,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "eslint . --fix --ignore-pattern **/helper/pinia-auto-refs.ts"
   },
   "config": {
     "commitizen": {
