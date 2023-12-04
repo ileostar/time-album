@@ -5,7 +5,7 @@
 import type { AutoToRefs, ToRef } from 'vue'
 
 import footerStore from '@/store/footer'
-import userStore from '@/store/user'
+import usersStore from '@/store/users'
 
 import store from '@/store'
 
@@ -17,7 +17,7 @@ declare module 'vue' {
 
 const storeExports = {
   footer: footerStore,
-  user: userStore,
+  users: usersStore,
 }
 
 export function useStore<T extends keyof typeof storeExports>(storeName: T) {

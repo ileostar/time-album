@@ -24,6 +24,5 @@ declare module '@vue/runtime-core' {
     NutList: typeof import('nutui-uniapp/components/list/list.vue')['default']
     NutSearchbar: typeof import('nutui-uniapp/components/searchbar/searchbar.vue')['default']
     NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
-    NutToast: typeof import('nutui-uniapp/components/toast/toast.vue')['default']
   }
 }
