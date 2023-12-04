@@ -13,7 +13,7 @@
       "type": "page"
     },
     {
-      "path": "pages/me",
+      "path": "pages/user",
       "type": "page"
     }
   ],
@@ -42,7 +42,7 @@
         "text": "发现"
       },
       {
-        "pagePath": "pages/me",
+        "pagePath": "pages/user",
         "text": "我的"
       }
     ]

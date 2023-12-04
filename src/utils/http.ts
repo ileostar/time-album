@@ -2,7 +2,7 @@ import type { AxiosResponse } from 'axios'
 import un, { type UnConfig } from '@uni-helper/uni-network'
 
 const instance = un.create({
-  baseUrl: 'https://some-domain.com/api/',
+  baseUrl: 'http://192.168.2.54:42500/',
   timeout: 1000,
   headers: { 'X-Custom-Header': 'foobar' },
 })

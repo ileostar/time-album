@@ -27,7 +27,7 @@ export default defineUniPages({
         text: '发现',
       },
       {
-        pagePath: 'pages/me',
+        pagePath: 'pages/user',
         text: '我的',
       },
     ],
