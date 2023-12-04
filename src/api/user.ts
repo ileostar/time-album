@@ -1,6 +1,3 @@
-// 案例学习：https://alova.js.org/zh-CN/tutorial/best-practice/method-manage
-import http from '..'
-
 export default {
   /**
    * 登陆

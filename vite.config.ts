@@ -40,7 +40,7 @@ export default defineConfig({
         '@/helper/pinia-auto-refs': ['useStore'],
       }],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables', 'src/stores', 'src/utils'],
+      dirs: ['src/composables', 'src/store', 'src/utils', 'src/api'],
       vueTemplate: true,
     }),
     PiniaAutoRefs(),
