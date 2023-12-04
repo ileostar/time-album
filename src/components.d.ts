@@ -9,9 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Albums: typeof import('./components/Albums.vue')['default']
     Charts: typeof import('./components/Charts.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
-    GridBox: typeof import('./components/GridBox.vue')['default']
     HiCounter: typeof import('./components/HiCounter.vue')['default']
     ImgHandle: typeof import('./components/ImgHandle.vue')['default']
     InputEntry: typeof import('./components/InputEntry.vue')['default']

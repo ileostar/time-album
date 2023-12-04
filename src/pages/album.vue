@@ -18,9 +18,9 @@
 </script>
 
 <template>
-  <GridBox>
+  <Albums>
     <ImgHandle />
     <ImgHandle />
     <ImgHandle />
-  </GridBox>
+  </Albums>
 </template>

@@ -1,6 +1,11 @@
 <template>
   <section class="layout">
     <slot />
+    <div flex="~ col" mt-1 items-center justify-start bg-blue>
+      <div flex="~" mt-1 items-center gap-3>
+        +
+      </div>
+    </div>
   </section>
 </template>
 
