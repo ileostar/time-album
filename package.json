@@ -64,6 +64,7 @@
     "@uni-helper/uni-use": "^0.17.1",
     "@vueuse/core": "^9.13.0",
     "alova": "^2.14.0",
+    "echarts": "^5.4.3",
     "nutui-uniapp": "^1.5.1",
     "pinia": "^2.1.7",
     "pinia-auto-refs": "^0.0.10",
