@@ -1,14 +1,17 @@
+/**
+ * @ileostar 用户相关接口
+ */
 export default {
   /**
-   * 登陆
+   * 用户登陆
    *
-   * @param {string} openId - The unique identifier of the user.
-   * @param {string} nickName - The nickname of the user.
-   * @param {string} avatarUrl - The URL of the user's avatar.
+   * @param {string} openId - 微信小程序openId
+   * @param {string} nickName - 用户昵称
+   * @param {string} avatarUrl - 用户头像地址
    * @return {Promise<unknown>} A Promise that resolves to the result of the login request.
    */
   login: (openId: string, nickName: string, avatarUrl: string) => {
-    return http.get('user/login', {
+    return http.post('user/login', {
       openId,
       nickName,
       avatarUrl,
@@ -18,7 +21,7 @@ export default {
   /**
    * 获取用户信息
    *
-   * @param {string} userId - The ID of the user to retrieve information for.
+   * @param {string} userId - 用户Id
    * @return {Promise} A Promise that resolves to the user information.
    */
   getUserInfo: (userId: string) => {
@@ -30,13 +33,13 @@ export default {
   /**
    * 更新用户信息
    *
-   * @param {string} userId - The ID of the user.
-   * @param {string} nickName - The new nickname for the user.
-   * @param {string} avatarUrl - The new avatar URL for the user.
+   * @param {string} userId - 用户Id
+   * @param {string} nickName - 用户昵称
+   * @param {string} avatarUrl - 用户头像地址
    * @return {Promise<any>} A promise that resolves to the updated user information.
    */
-  updateUserInfo: (userId: string, nickName: string, avatarUrl: string) => {
-    return http.get('/user/update', {
+  updateUserInfo: (userId: string, nickName?: string, avatarUrl?: string) => {
+    return http.put('/user/update', {
       userId,
       nickName,
       avatarUrl,
@@ -46,7 +49,7 @@ export default {
   /**
    * 返回openId
    *
-   * @param {string} code - The code to retrieve the OpenID for.
+   * @param {string} code - 微信小程序获取code
    * @return {Promise<any>} - A Promise that resolves to the OpenID.
    */
   getOpenId: (code: string) => {

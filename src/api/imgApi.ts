@@ -1,3 +1,6 @@
+/**
+ * @ileostar 图片相关接口
+ */
 export default {
   /**
    * 查看图片详情
@@ -25,4 +28,35 @@ export default {
     })
   },
 
+  /**
+   * 修改图片所在相册
+   *
+   * @param {string} imageId - 图片Id
+   * @param {string} orgAlbumId - 原相册Id
+   * @param {string} updateAlbumId - 修改后相册Id
+   * @param {number} type - 修改方式(移动/复制)
+   * @return {Promise} A promise that resolves to the updated image.
+   */
+  updateImgPosition: (imageId: string, orgAlbumId: string, updateAlbumId: string, type: number) => {
+    return http.put('/images/update', {
+      imageId,
+      orgAlbumId,
+      updateAlbumId,
+      type,
+    })
+  },
+
+  /**
+   * 删除图片
+   *
+   * @param {string} imageId - 图片Id
+   * @param {string} albumId - 相册Id
+   * @return {Promise} A promise that resolves to the result of the deletion operation.
+   */
+  deleteImag: (imageId: string, albumId: string) => {
+    return http.delete('/images/delete', {
+      imageId,
+      albumId,
+    })
+  },
 }

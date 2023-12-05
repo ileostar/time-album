@@ -1,3 +1,6 @@
+/**
+ * @ileostar 相册相关接口
+ */
 export default {
   /**
    * 获取所有相册
@@ -13,15 +16,15 @@ export default {
    *
    * @return {Promise} A Promise that resolves with the list of images.
    */
-  getListByTime: () => {
+  getRecentPhotoAlbums: () => {
     return http.get('/images/listByTime')
   },
 
   /**
    * 新增相册
    *
-   * @param {string} userId - The ID of the user.
-   * @param {string} albumName - The name of the album.
+   * @param {string} userId - 用户Id
+   * @param {string} albumName - 相册名
    * @return {Promise} A promise that resolves with the response from the server.
    */
   addAlbum: (userId: string, albumName: string) => {
@@ -34,12 +37,12 @@ export default {
   /**
    * 更新相册
    *
-   * @param {string} albumId - The ID of the album to update.
-   * @param {string} albumName - The new name for the album.
+   * @param {string} albumId - 相册Id
+   * @param {string} albumName - 相册名
    * @return {unknown} The response from the HTTP post request.
    */
   updateAlbum: (albumId: string, albumName: string) => {
-    return http.post('/album/update', {
+    return http.put('/album/update', {
       albumId,
       albumName,
     })
@@ -48,11 +51,11 @@ export default {
   /**
    * 删除相册
    *
-   * @param {string} albumId - The ID of the album to delete.
+   * @param {string} albumId - 相册Id
    * @return {Promise<any>} A promise that resolves when the album is deleted.
    */
   deleteAlbum: (albumId: string) => {
-    return http.post('/album/delete', {
+    return http.delete('/album/delete', {
       albumId,
     })
   },
@@ -60,11 +63,11 @@ export default {
   /**
    * 获取相册所有图片.
    *
-   * @param {string} albumId - The ID of the album.
+   * @param {string} albumId - 相册Id
    * @return {Promise<any>} - A promise that resolves with the response from the server.
    */
   getAllAlbumImg: (albumId: string) => {
-    return http.post('/images/getAll', {
+    return http.get('/images/getAll', {
       albumId,
     })
   },
