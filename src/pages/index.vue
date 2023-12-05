@@ -44,3 +44,9 @@ body {
   }
 }
 </style>
+
+<route type="searchPage" lang="json">
+  {
+    "layout": "searchPage"
+  }
+</route>

@@ -3,5 +3,11 @@
 <template>
   <MomentCard />
   <MomentCard />
-  <AddMoment />
+  <AddMomentIcon />
 </template>
+
+<route type="searchPage" lang="json">
+  {
+    "layout": "searchPage"
+  }
+</route>

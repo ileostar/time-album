@@ -8,6 +8,8 @@ interface NavigateToOptions {
        "pages/album" |
        "pages/find" |
        "pages/user" |
+       "pages/child/addAlbum" |
+       "pages/child/addMoment" |
        "pages/child/albumDetail" |
        "pages/child/searchResult" |
        "pages/child/setting";

@@ -6,11 +6,11 @@ const { active } = useStore('tabbar')
  * @param url string
  */
 function tabSwitch(item: any, url: string) {
-  // eslint-disable-next-line no-console
-  console.log('active', active.value)
-  uni.switchTab({
-    url,
-  })
+  if (url) {
+    uni.switchTab({
+      url,
+    })
+  }
 }
 
 /**

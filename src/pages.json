@@ -2,20 +2,31 @@
   "pages": [
     {
       "path": "pages/index",
-      "type": "home"
+      "type": "home",
+      "layout": "searchPage"
     },
     {
       "path": "pages/album",
-      "type": "page"
+      "type": "searchPage",
+      "layout": "searchPage"
     },
     {
       "path": "pages/find",
-      "type": "page"
+      "type": "searchPage",
+      "layout": "searchPage"
     },
     {
       "path": "pages/user",
       "type": "userPage",
       "layout": "userPage"
+    },
+    {
+      "path": "pages/child/addAlbum",
+      "type": "page"
+    },
+    {
+      "path": "pages/child/addMoment",
+      "type": "page"
     },
     {
       "path": "pages/child/albumDetail",

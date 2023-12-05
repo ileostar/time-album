@@ -9,8 +9,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AddAlbum: typeof import('./components/AddAlbum.vue')['default']
-    AddMoment: typeof import('./components/AddMoment.vue')['default']
+    AddAlbumIcon: typeof import('./components/AddAlbumIcon.vue')['default']
+    AddMomentIcon: typeof import('./components/AddMomentIcon.vue')['default']
     AlbumItem: typeof import('./components/AlbumItem.vue')['default']
     AlbumsBox: typeof import('./components/AlbumsBox.vue')['default']
     Charts: typeof import('./components/Charts.vue')['default']
@@ -20,8 +20,13 @@ declare module '@vue/runtime-core' {
     ImagesBox: typeof import('./components/ImagesBox.vue')['default']
     MomentCard: typeof import('./components/MomentCard.vue')['default']
     NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
+    NutButton: typeof import('nutui-uniapp/components/button/button.vue')['default']
+    NutCell: typeof import('nutui-uniapp/components/cell/cell.vue')['default']
     NutDialog: typeof import('nutui-uniapp/components/dialog/dialog.vue')['default']
+    NutForm: typeof import('nutui-uniapp/components/form/form.vue')['default']
+    NutFormItem: typeof import('nutui-uniapp/components/formitem/formitem.vue')['default']
     NutIcon: typeof import('nutui-uniapp/components/icon/icon.vue')['default']
+    NutInput: typeof import('nutui-uniapp/components/input/input.vue')['default']
     NutSearchbar: typeof import('nutui-uniapp/components/searchbar/searchbar.vue')['default']
     NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
     NutTabbar: typeof import('nutui-uniapp/components/tabbar/tabbar.vue')['default']

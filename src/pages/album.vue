@@ -23,5 +23,11 @@
     <AlbumItem />
     <AlbumItem />
   </AlbumsBox>
-  <AddAlbum />
+  <AddAlbumIcon />
 </template>
+
+<route type="searchPage" lang="json">
+  {
+    "layout": "searchPage"
+  }
+</route>
