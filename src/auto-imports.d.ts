@@ -9,6 +9,7 @@ declare global {
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const album: typeof import('./api/album')['default']
   const albumApi: typeof import('./api/albumApi')['default']
+  const albums: typeof import('./store/albums')['default']
   const api: typeof import('./utils/http')['default']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
@@ -46,6 +47,7 @@ declare global {
   const h: typeof import('vue')['h']
   const http: typeof import('./utils/http')['default']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
+  const images: typeof import('./store/images')['default']
   const imgApi: typeof import('./api/imgApi')['default']
   const inject: typeof import('vue')['inject']
   const injectLocal: typeof import('@vueuse/core')['injectLocal']
@@ -63,6 +65,7 @@ declare global {
   const mapWritableState: typeof import('pinia')['mapWritableState']
   const markRaw: typeof import('vue')['markRaw']
   const momentApi: typeof import('./api/momentApi')['default']
+  const moments: typeof import('./store/moments')['default']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onAddToFavorites: typeof import('@dcloudio/uni-app')['onAddToFavorites']
@@ -126,7 +129,10 @@ declare global {
   const resolveComponent: typeof import('vue')['resolveComponent']
   const resolveRef: typeof import('@vueuse/core')['resolveRef']
   const resolveUnref: typeof import('@vueuse/core')['resolveUnref']
+  const search: typeof import('./store/searchs')['default']
   const searchApi: typeof import('./api/searchApi')['default']
+  const searchResult: typeof import('./store/searchs')['default']
+  const searchs: typeof import('./store/searchs')['default']
   const setActivePinia: typeof import('pinia')['setActivePinia']
   const setMapStoreSuffix: typeof import('pinia')['setMapStoreSuffix']
   const shallowReactive: typeof import('vue')['shallowReactive']
@@ -349,6 +355,7 @@ declare module 'vue' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly albumApi: UnwrapRef<typeof import('./api/albumApi')['default']>
+    readonly albums: UnwrapRef<typeof import('./store/albums')['default']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -375,13 +382,13 @@ declare module 'vue' {
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
-    readonly footer: UnwrapRef<typeof import('./store/footer')['default']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('./utils/http')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
+    readonly images: UnwrapRef<typeof import('./store/images')['default']>
     readonly imgApi: UnwrapRef<typeof import('./api/imgApi')['default']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
@@ -397,6 +404,7 @@ declare module 'vue' {
     readonly mapWritableState: UnwrapRef<typeof import('pinia')['mapWritableState']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly momentApi: UnwrapRef<typeof import('./api/momentApi')['default']>
+    readonly moments: UnwrapRef<typeof import('./store/moments')['default']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onAddToFavorites: UnwrapRef<typeof import('@dcloudio/uni-app')['onAddToFavorites']>
@@ -458,6 +466,7 @@ declare module 'vue' {
     readonly resolveRef: UnwrapRef<typeof import('@vueuse/core')['resolveRef']>
     readonly resolveUnref: UnwrapRef<typeof import('@vueuse/core')['resolveUnref']>
     readonly searchApi: UnwrapRef<typeof import('./api/searchApi')['default']>
+    readonly searchs: UnwrapRef<typeof import('./store/searchs')['default']>
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
@@ -664,6 +673,7 @@ declare module '@vue/runtime-core' {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly albumApi: UnwrapRef<typeof import('./api/albumApi')['default']>
+    readonly albums: UnwrapRef<typeof import('./store/albums')['default']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -690,13 +700,13 @@ declare module '@vue/runtime-core' {
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
-    readonly footer: UnwrapRef<typeof import('./store/footer')['default']>
     readonly getActivePinia: UnwrapRef<typeof import('pinia')['getActivePinia']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly http: UnwrapRef<typeof import('./utils/http')['default']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
+    readonly images: UnwrapRef<typeof import('./store/images')['default']>
     readonly imgApi: UnwrapRef<typeof import('./api/imgApi')['default']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
@@ -712,6 +722,7 @@ declare module '@vue/runtime-core' {
     readonly mapWritableState: UnwrapRef<typeof import('pinia')['mapWritableState']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly momentApi: UnwrapRef<typeof import('./api/momentApi')['default']>
+    readonly moments: UnwrapRef<typeof import('./store/moments')['default']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onAddToFavorites: UnwrapRef<typeof import('@dcloudio/uni-app')['onAddToFavorites']>
@@ -773,6 +784,7 @@ declare module '@vue/runtime-core' {
     readonly resolveRef: UnwrapRef<typeof import('@vueuse/core')['resolveRef']>
     readonly resolveUnref: UnwrapRef<typeof import('@vueuse/core')['resolveUnref']>
     readonly searchApi: UnwrapRef<typeof import('./api/searchApi')['default']>
+    readonly searchs: UnwrapRef<typeof import('./store/searchs')['default']>
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>

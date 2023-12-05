@@ -7,7 +7,10 @@ interface NavigateToOptions {
   url: "pages/index" |
        "pages/album" |
        "pages/find" |
-       "pages/user";
+       "pages/user" |
+       "pages/child/albumDetail" |
+       "pages/child/searchResult" |
+       "pages/child/setting";
 }
 interface RedirectToOptions extends NavigateToOptions {}
 

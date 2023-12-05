@@ -15,6 +15,18 @@
     {
       "path": "pages/user",
       "type": "page"
+    },
+    {
+      "path": "pages/child/albumDetail",
+      "type": "page"
+    },
+    {
+      "path": "pages/child/searchResult",
+      "type": "page"
+    },
+    {
+      "path": "pages/child/setting",
+      "type": "page"
     }
   ],
   "globalStyle": {

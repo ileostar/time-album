@@ -4,7 +4,10 @@
 // @ts-nocheck
 import type { AutoToRefs, ToRef } from 'vue'
 
-import footerStore from '@/store/footer'
+import albumsStore from '@/store/albums'
+import imagesStore from '@/store/images'
+import momentsStore from '@/store/moments'
+import searchsStore from '@/store/searchs'
 import usersStore from '@/store/users'
 
 import store from '@/store'
@@ -16,7 +19,10 @@ declare module 'vue' {
 }
 
 const storeExports = {
-  footer: footerStore,
+  albums: albumsStore,
+  images: imagesStore,
+  moments: momentsStore,
+  searchs: searchsStore,
   users: usersStore,
 }
 
