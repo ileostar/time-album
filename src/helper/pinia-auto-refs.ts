@@ -8,6 +8,7 @@ import albumsStore from '@/store/albums'
 import imagesStore from '@/store/images'
 import momentsStore from '@/store/moments'
 import searchsStore from '@/store/searchs'
+import tabbarStore from '@/store/tabbar'
 import usersStore from '@/store/users'
 
 import store from '@/store'
@@ -23,6 +24,7 @@ const storeExports = {
   images: imagesStore,
   moments: momentsStore,
   searchs: searchsStore,
+  tabbar: tabbarStore,
   users: usersStore,
 }
 

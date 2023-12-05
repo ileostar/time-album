@@ -14,8 +14,9 @@ declare module '@vue/runtime-core' {
     AlbumItem: typeof import('./components/AlbumItem.vue')['default']
     AlbumsBox: typeof import('./components/AlbumsBox.vue')['default']
     Charts: typeof import('./components/Charts.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
+    EmptyStatus: typeof import('./components/EmptyStatus.vue')['default']
     ImageItem: typeof import('./components/ImageItem.vue')['default']
+    ImagePreview: typeof import('./components/ImagePreview.vue')['default']
     ImagesBox: typeof import('./components/ImagesBox.vue')['default']
     MomentCard: typeof import('./components/MomentCard.vue')['default']
     NutAvatar: typeof import('nutui-uniapp/components/avatar/avatar.vue')['default']
@@ -23,5 +24,9 @@ declare module '@vue/runtime-core' {
     NutIcon: typeof import('nutui-uniapp/components/icon/icon.vue')['default']
     NutSearchbar: typeof import('nutui-uniapp/components/searchbar/searchbar.vue')['default']
     NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
+    NutTabbar: typeof import('nutui-uniapp/components/tabbar/tabbar.vue')['default']
+    NutTabbarItem: typeof import('nutui-uniapp/components/tabbaritem/tabbaritem.vue')['default']
+    Tabbar: typeof import('./components/Tabbar.vue')['default']
+    UploadImage: typeof import('./components/UploadImage.vue')['default']
   }
 }

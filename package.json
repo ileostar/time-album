@@ -70,6 +70,7 @@
     "nutui-uniapp": "^1.5.1",
     "pinia": "^2.0.36",
     "pinia-auto-refs": "^0.0.10",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.3.8",
     "vue-i18n": "^9.6.5"
   },

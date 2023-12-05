@@ -8,6 +8,6 @@
       </nut-searchbar>
     </nut-sticky>
     <slot />
-    <Footer />
+    <Tabbar />
   </view>
 </template>
