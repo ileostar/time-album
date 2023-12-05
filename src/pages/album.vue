@@ -18,13 +18,6 @@
 </script>
 
 <template>
-  <nut-sticky>
-    <nut-searchbar>
-      <template #leftin>
-        <nut-icon name="search2" />
-      </template>
-    </nut-searchbar>
-  </nut-sticky>
   <AlbumsBox mt-3>
     <AlbumItem />
     <AlbumItem />

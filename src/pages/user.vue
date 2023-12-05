@@ -116,3 +116,9 @@ async function wxLogin(): Promise<void> {
   background-size: cover;
 }
 </style>
+
+<route type="userPage" lang="json">
+  {
+    "layout": "userPage"
+  }
+</route>

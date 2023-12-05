@@ -12,13 +12,6 @@ export default {
 </script>
 
 <template>
-  <nut-sticky>
-    <nut-searchbar>
-      <template #leftin>
-        <nut-icon name="search2" />
-      </template>
-    </nut-searchbar>
-  </nut-sticky>
   <ImagesBox>
     <ImageItem />
     <ImageItem />

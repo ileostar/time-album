@@ -14,7 +14,8 @@
     },
     {
       "path": "pages/user",
-      "type": "page"
+      "type": "userPage",
+      "layout": "userPage"
     },
     {
       "path": "pages/child/albumDetail",
