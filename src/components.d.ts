@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     AlbumItem: typeof import('./components/AlbumItem.vue')['default']
     AlbumsBox: typeof import('./components/AlbumsBox.vue')['default']
     Charts: typeof import('./components/Charts.vue')['default']
+    Content: typeof import('./components/Content.vue')['default']
     EmptyStatus: typeof import('./components/EmptyStatus.vue')['default']
     ImageItem: typeof import('./components/ImageItem.vue')['default']
     ImagePreview: typeof import('./components/ImagePreview.vue')['default']
@@ -31,6 +32,7 @@ declare module '@vue/runtime-core' {
     NutSticky: typeof import('nutui-uniapp/components/sticky/sticky.vue')['default']
     NutTabbar: typeof import('nutui-uniapp/components/tabbar/tabbar.vue')['default']
     NutTabbarItem: typeof import('nutui-uniapp/components/tabbaritem/tabbaritem.vue')['default']
+    NutTextarea: typeof import('nutui-uniapp/components/textarea/textarea.vue')['default']
     Tabbar: typeof import('./components/Tabbar.vue')['default']
     UploadImage: typeof import('./components/UploadImage.vue')['default']
   }

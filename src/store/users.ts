@@ -1,4 +1,4 @@
-interface IUserInfos {
+export interface IUserInfos {
   userId: string
   openId: string
   nickName: string

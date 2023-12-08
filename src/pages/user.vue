@@ -1,38 +1,15 @@
 <script setup lang="ts">
-import type { ToastInst } from 'nutui-uniapp'
-
-const visible1 = ref(false)
-const toastRef = ref<ToastInst>()
-function onCancel() {
-  // eslint-disable-next-line no-console
-  console.log('event cancel')
-}
-function onOk() {
-  // eslint-disable-next-line no-console
-  console.log('event ok')
-}
 function baseClick(): void {
-  visible1.value = true
+  uni.navigateTo({ url: '/pages/child/setting' })
 }
 
+function toPeoPle(): void {
+  uni.navigateTo({ url: '/pages/child/albumDetail' })
+}
+function toLandscape(): void {
+  uni.navigateTo({ url: '/pages/child/albumDetail' })
+}
 const { updateUserInfos } = useStore('users')
-
-/**
- * Executes a click event on a ref.
- *
- * @param {string} type - The type of the toast to show.
- * @param {string} msg - The message to display in the toast.
- */
-function refClick(type: string, msg: string) {
-  toastRef.value?.showToast[type as 'fail' | 'success' | 'warn' | 'loading'](msg, {
-    title: '使用ref调用更加方便与灵活',
-    duration: 0,
-  })
-
-  setTimeout(() => {
-    toastRef.value?.hideToast()
-  }, 1000)
-}
 
 /**
  * 小程序登陆
@@ -42,26 +19,38 @@ function refClick(type: string, msg: string) {
  */
 async function wxLogin(): Promise<void> {
   try {
-    const p1 = await uni.login()
-    const p2 = await uni.getUserProfile()
+    const p1 = await uni.login({
+      provider: 'weixin',
+    })
+    const p2 = await uni.getUserInfo()
     const openidReq = await userApi.getOpenId(p1.code)
+    // eslint-disable-next-line no-console
+    console.log(openidReq)
     if (openidReq.data.code === 200) {
-      const loginReq = await userApi.login(openidReq.data.data.openid, p2.userInfo.nickName, p2.userInfo.avatarUrl)
+      // eslint-disable-next-line no-console
+      console.log(openidReq.data.data)
+      const loginReq = await userApi.login(openidReq.data.data, p2.userInfo.nickName, p2.userInfo.avatarUrl)
+      // eslint-disable-next-line no-console
+      console.log(loginReq)
       if (loginReq.data.code === 200) {
         updateUserInfos(loginReq.data.data) // 更新用户数据
-        refClick('success', '登陆成功')
+        // eslint-disable-next-line no-console
+        console.log('success', '登陆成功')
+        useToasts('success', '登陆成功')
       }
       else {
-        refClick('fail', '登陆失败')
+        // eslint-disable-next-line no-console
+        console.log('fail', '登陆失败')
+        useToasts('fail', '登陆失败')
       }
     }
     else {
-      refClick('fail', '获取openid错误')
+      useToasts('fail', '获取openid错误')
     }
   }
   catch (error) {
     console.error(error)
-    refClick('fail', '发生错误')
+    useToasts('fail', '发生错误')
   }
 }
 </script>
@@ -91,18 +80,17 @@ async function wxLogin(): Promise<void> {
       </h3>
     </div>
     <div mt-1 h-30 w-full flex gap-2 overflow-hidden>
-      <div class="people" flex="~ 1" w="50%" relative h-full items-end justify-center overflow-hidden rd-3 shadow-sm blur="0.5">
+      <div class="people" flex="~ 1" w="50%" relative h-full items-end justify-center overflow-hidden rd-3 shadow-sm blur="0.5" @click="toPeoPle">
         <h3 mb-2 color-white>
           人物
         </h3>
       </div>
-      <div class="landscape" flex="~ 1" w="50%" relative h-full items-end justify-center overflow-hidden rd-3 shadow-sm blur="0.5">
+      <div class="landscape" flex="~ 1" w="50%" relative h-full items-end justify-center overflow-hidden rd-3 shadow-sm blur="0.5" @click="toLandscape">
         <h3 mb-2 color-white>
           风景
         </h3>
       </div>
     </div>
-    <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" @cancel="onCancel" @ok="onOk" />
   </view>
 </template>
 
